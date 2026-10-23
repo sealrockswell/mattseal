@@ -1,66 +1,67 @@
 # mattseal
 
-**A creative playground for design, technology, culture, and things I can't leave alone.**
+**A personal creative studio for design, technology, culture, and things I can't leave alone.**
 
-mattseal.com is an experimental personal website by Matthew Kearney, a product designer exploring the intersection of design, technology, creative coding, and personal expression.
+mattseal.com is an experimental personal website by Matthew Kearney, a product designer exploring design, technology, creative coding, and personal expression.
 
-Unlike my professional portfolio at [sealspace.com](https://sealspace.com/), this is a space for curiosity, experimentation, and ideas that don't necessarily fit into a traditional case study.
+Professional work lives at [sealspace.com](https://sealspace.com/). This studio is a space for curiosity, thinking, work in progress, and creative interests.
 
-## The Concept
+## Creative Direction
 
-An evolving personal publication with the visual sensibility of an independent design magazine and the interactivity of the modern web.
+Expressive typography, warm paper textures, bold original graphics, asymmetrical compositions, and restrained analog details. The visual sensibility draws on editorial design, while the experience centers on a person and their creative process.
 
-The creative direction combines:
+Keep the established hero and its mobile composition. Colors and typography remain provisional. Meaningful content should determine interactions; decorative technical demonstrations are not a goal.
 
-- **Editorial design:** Expressive typography, unconventional compositions, and thoughtful visual hierarchy.
-- **Analog inspiration:** Print textures, halftones, collage, nostalgic graphics, and tactile details.
-- **Digital experimentation:** Creative coding, playful interactions, animation, and emerging technologies.
-- **Personal perspective:** Design opinions, videos, cultural influences, and behind-the-scenes explorations.
+## Studio Structure
 
-The goal isn't nostalgia for its own sake. It's to explore how the character and imperfections of physical media can make digital experiences feel more human.
+- **Meet Matt:** The existing hero and introduction, with a personal sign-off and professional-work link.
+- **On My Workbench:** Building mattseal.com, moving away from a TV-centered concept, and exploring AI-assisted development.
+- **Things on My Mind:** Matt's supplied perspective that as AI makes building easier, judgment about what deserves to exist becomes more important.
+- **Behind the Scenes:** Clearly reserved space for genuine process documentation. No invented artifacts, screenshots, or videos.
+- **Current Obsessions:** [rectangles.fm](https://rectangles.fm/) and [My 80s TV](https://80s.theretrotvs.com/) as references for analog-inspired digital creativity. These are external links, not embedded experiences or copied assets.
 
-## What You'll Find
-
-**Notes**\
-Perspectives on product design, AI, creativity, and the evolving role of designers.
-
-**Experiments**\
-Interactive prototypes, creative coding projects, unconventional interfaces, and ideas worth exploring.
-
-**Currently Collecting**\
-Music, design references, cultural artifacts, and unexpected sources of inspiration.
-
-**Video & Process**\
-Occasional commentary, creative explorations, and documentation of the design and development process.
-
-These sections represent the intended direction and will evolve as content is created.
+Section names are working labels. Personal commentary is provisional copy for Matt's review, based on his supplied starting points. It is not presented as published content.
 
 ## Built With
 
-The initial prototype uses a deliberately lightweight stack:
-
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Cursor
-- OpenAI Codex
-- Git & GitHub
-
-No frontend framework or CMS is required at this stage.
-
-The site is being developed through an AI-assisted workflow combining human creative direction, design critique, iterative prototyping, and code generation.
+HTML, CSS, and vanilla JavaScript, developed with an AI-assisted workflow using Cursor and OpenAI Codex. Version control uses Git and GitHub. No framework, CMS, package installation, or build step is required.
 
 ## Getting Started
 
-Clone the repository:
 ```bash
 git clone https://github.com/sealrockswell/mattseal.git
 cd mattseal
 ```
 
-Open `index.html` in a browser to preview the current prototype.
+Open `index.html` directly in a browser, or run this local-only server from the project folder (Python 3 required):
 
-As the project evolves, additional setup instructions will be documented here.
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Visit http://127.0.0.1:8000. Stop the server with Ctrl+C.
+
+## Project Files
+
+- `index.html` — Semantic studio sections, provisional commentary, and native anchor navigation.
+- `styles.css` — Design tokens, responsive hero, varied studio layouts, focus treatments, and reduced-motion support.
+- `main.js` — Reserved for future content-driven enhancements. Currently contains no executable behavior; the entire homepage works without JavaScript.
+- `assets/` — Original local SVG print artwork, paper grain, and favicon. No remote images or fonts are requested.
+
+The former two-layer print reveal, its controls, styles, behavior, and exclusive second artwork have been removed. No replacement novelty interaction has been added.
+
+## Iteration and Review
+
+Edit copy in `index.html`. Tune color and font tokens at the top of `styles.css`. Keep new behavior optional and useful to the content. Use clearly labeled placeholders where genuine material is not yet available.
+
+Review at **390px, 768px, and 1440px**:
+
+- Check horizontal overflow, readable text, artwork containment, and unintended overlaps.
+- Tab through the skip link, navigation, and content links; verify visible focus and logical order.
+- Check internal destinations and accessible section names.
+- Disable JavaScript: all content and navigation should remain functional.
+- Enable reduced motion: scrolling should be immediate.
+- Review on physical touch devices and in Safari and Firefox before launch.
 
 ## Design Principles
 
@@ -72,9 +73,9 @@ As the project evolves, additional setup instructions will be documented here.
 
 ## Project Status
 
-**Early development / Creative exploration**
+**Local creative prototype / Personal commentary awaiting review**
 
-The initial prototype is functional. The next milestone is an expressive, responsive editorial homepage with analog-inspired visual treatments and interactive details.
+The studio structure is implemented. Genuine process documentation remains to be selected and added. There are no invented finished experiments, personal stories, achievements, or videos. No CMS, analytics, deployment configuration, or domain connection is included.
 
 ## About
 
