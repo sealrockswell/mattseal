@@ -60,7 +60,40 @@ cd mattseal
 
 Open `index.html` in a browser to preview the current prototype.
 
-As the project evolves, additional setup instructions will be documented here.
+For a local HTTP preview (Python 3 required), run from the project folder:
+
+```bash
+python3 -m http.server 8000 --bind 127.0.0.1
+```
+
+Visit http://127.0.0.1:8000. Stop the server with Ctrl+C. No install or build step is required; opening `index.html` directly also works.
+
+## Project Files
+
+- `index.html` — Semantic homepage, draft editorial content, and navigation.
+- `styles.css` — Provisional design tokens, editorial layouts, responsive rules, and reduced-motion support.
+- `main.js` — Progressively enhances the print study with a native range slider.
+- `assets/` — Original local SVG print artwork, subtle grain, and favicon. No remote image or font requests.
+
+## Iterating on the Prototype
+
+Change the color and font tokens at the top of `styles.css` to explore art direction. System fonts keep the prototype self-contained. Edit draft copy directly in `index.html`; replace or extend the SVG artwork in `assets/`.
+
+The print reveal uses a native range input for pointer, touch, and keyboard access. Arrow keys adjust it; Home and End reveal either full composition. Without JavaScript, the artwork remains a static split print and the inactive control stays hidden. All navigation and text remain available. Reduced-motion preferences disable smooth scrolling; the reveal itself tracks the input directly without animated easing.
+
+## Prototype Review Checklist
+
+- Review at narrow mobile, tablet, and wide desktop widths; check for overflow and overlapping text.
+- Tab through links and the slider; verify visible focus and the skip link.
+- Move the slider with pointer/touch and Arrow, Home, and End keys.
+- Disable JavaScript: content, navigation, artwork, and external links should still work.
+- Enable reduced motion and check that scrolling is immediate.
+
+## Draft Material and Next Steps
+
+All editorial copy is provisional. Notes are inline draft fragments, not published articles. Currently Collecting contains original graphic studies and labeled collection prompts, not claims about actual possessions, music, or cultural finds. No personal photographs or real videos are included.
+
+Next: review typography, color, and composition; replace draft prompts with personal material; develop individual entries and video content when available. There is no CMS, archive, analytics, deployment configuration, or domain connection.
 
 ## Design Principles
 
@@ -74,7 +107,7 @@ As the project evolves, additional setup instructions will be documented here.
 
 **Early development / Creative exploration**
 
-The initial prototype is functional. The next milestone is an expressive, responsive editorial homepage with analog-inspired visual treatments and interactive details.
+The first editorial homepage milestone is implemented locally: an expressive opening spread, draft Notes, a working two-layer print experiment, Currently Collecting prompts, and a personal sign-off. Colors and typography remain provisional. Browser and device review is still required before treating this as production-ready.
 
 ## About
 
