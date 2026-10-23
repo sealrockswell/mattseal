@@ -1,0 +1,19 @@
+# macOS metadata
+.DS_Store
+._*
+
+# Local secrets (keep example configuration trackable)
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated output
+node_modules/
+dist/
+coverage/
+
+# Logs and temporary editor files
+*.log
+*.swp
+*.swo
+*~
