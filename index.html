@@ -41,22 +41,26 @@
     <section class="workbench" id="workbench" aria-labelledby="workbench-title">
       <div class="wrap">
         <div class="section-label meta"><span>On My Workbench</span><span>In progress</span></div>
-        <div class="workbench-layout">
-          <div class="workbench-copy">
-            <h2 id="workbench-title">Building<br><em>mattseal.com.</em></h2>
-            <p>A personal creative studio, built through an exploration of AI-assisted development. The site itself is the current experiment.</p>
-            <span class="draft-tag">Provisional commentary / For review</span>
-          </div>
-          <div class="bench-sheet">
-            <span class="meta">The direction, so far</span>
-            <h3>Less metaphor.<br>More room to explore.</h3>
-            <dl>
-              <div><dt>Moving away from</dt><dd>A TV-centered prototype where switching channels was the main interaction.</dd></div>
-              <div><dt>Moving toward</dt><dd>A space for thinking, experiments, and creative interests, with analog character and a clearer sense of purpose.</dd></div>
-              <div><dt>Exploring</dt><dd>How AI-assisted development can support an iterative design process—and where human judgment needs to lead.</dd></div>
-            </dl>
-            <a href="#process">Space for the process <span aria-hidden="true">↓</span></a>
-          </div>
+        <div class="lab-heading"><div><h2 id="workbench-title">Evolution<br><em>Lab.</em></h2><p>One website. Three real directions. Explore what changed—and why.</p></div><div><span class="meta">Building mattseal.com</span><p>An exploration of AI-assisted development, guided by design judgment.</p><span class="draft-tag">Provisional commentary / For review</span></div></div>
+        <div class="evolution-lab">
+          <nav class="version-selector" aria-label="Website milestones">
+            <a href="#milestone-v1" id="select-v1"><span class="meta">V1</span> Retro TV</a>
+            <a href="#milestone-v2" id="select-v2"><span class="meta">V2</span> Editorial</a>
+            <a href="#milestone-v3" id="select-v3"><span class="meta">V3</span> Open Studio</a>
+          </nav>
+          <article class="version-panel" id="milestone-v1" aria-labelledby="title-v1">
+            <figure><img src="assets/v1-retro-tv.webp" width="1440" height="1000" loading="lazy" alt="The original prototype showing its retro television and channel controls."><figcaption class="meta">Actual capture / Saved V1 milestone</figcaption></figure>
+            <div class="version-commentary"><span class="meta">V1 / Retro TV</span><h3 id="title-v1">Retro TV</h3><p>A television-shaped interface made channel switching the central way to explore.</p><div class="decision"><span class="meta">Design decision</span><p>The metaphor gave the prototype character, but put the interface ahead of the content.</p></div><a class="source-link" href="https://github.com/sealrockswell/mattseal/tree/v1-retro-tv" target="_blank" rel="noopener noreferrer">View V1 source on GitHub <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="version-panel" id="milestone-v2" aria-labelledby="title-v2">
+            <figure><img src="assets/v2-editorial.webp" width="1440" height="1000" loading="lazy" alt="The saved editorial prototype showing the two-layer print reveal study."><figcaption class="meta">Actual capture / Saved V2 milestone</figcaption></figure>
+            <div class="version-commentary"><span class="meta">V2 / Editorial</span><h3 id="title-v2">Editorial</h3><p>Oversized type, paper textures, and a two-layer print study explored a more editorial direction.</p><div class="decision"><span class="meta">Design decision</span><p>The reveal slider added interaction, but its visual payoff did not give visitors enough meaningful content.</p></div><a class="source-link" href="https://github.com/sealrockswell/mattseal/tree/v2-editorial" target="_blank" rel="noopener noreferrer">View V2 source on GitHub <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <article class="version-panel" id="milestone-v3" aria-labelledby="title-v3">
+            <figure><img src="assets/v3-open-studio.webp" width="1440" height="753" loading="lazy" alt="The saved Open Studio homepage showing the site-building workbench."><figcaption class="meta">Actual capture / Saved V3 milestone</figcaption></figure>
+            <div class="version-commentary"><span class="meta">V3 / Open Studio</span><h3 id="title-v3">Open Studio</h3><p>The homepage became a personal creative studio for work in progress, thinking, and creative interests.</p><div class="decision"><span class="meta">Design decision</span><p>Keep the expressive visual foundation. Let real content decide what deserves an interaction.</p></div><a class="source-link" href="https://github.com/sealrockswell/mattseal/tree/v3-open-studio" target="_blank" rel="noopener noreferrer">View V3 source on GitHub <span aria-hidden="true">↗</span></a></div>
+          </article>
+          <p class="lab-access">Explore the source behind each milestone on GitHub. Each link opens its saved version in a new tab.</p>
         </div>
       </div>
     </section>
@@ -77,24 +81,21 @@
     <section class="obsessions section wrap" id="obsessions" aria-labelledby="obsessions-title">
       <div class="section-label meta"><span>Current Obsessions</span><span>References worth exploring</span></div>
       <div class="obsessions-heading"><h2 id="obsessions-title">Analog character.<br><em>Digital possibility.</em></h2><p>Two starting points for exploring how nostalgic visual influences can become digital experiences.<br><span class="draft-tag">Provisional commentary / For review</span></p></div>
-      <div class="reference-grid">
-        <article class="reference reference-paper">
-          <span class="meta">Graphic sensibility / Human personality</span>
-          <h3><a href="https://rectangles.fm/">rectangles.fm <span aria-hidden="true">↗</span></a></h3>
-          <p>A reference for the analog-inspired graphic sensibility and human personality I want to explore here.</p>
-          <span class="reference-mark" aria-hidden="true">Aa*</span>
-        </article>
-        <article class="reference reference-blue">
-          <span class="meta">Nostalgia / Digital interaction</span>
-          <h3><a href="https://80s.theretrotvs.com/">My 80s TV <span aria-hidden="true">↗</span></a></h3>
-          <p>A reference for analog-inspired digital creativity. The studio can take inspiration from that character while finding its own way to explore.</p>
-          <span class="reference-domain meta">80s.theretrotvs.com</span>
-          <span class="reference-mark" aria-hidden="true">↗</span>
-        </article>
-      </div>
+      <article class="tv-discovery" aria-labelledby="discovery-title">
+        <div class="discovery-copy"><span class="meta">Featured discovery / Analog meets digital</span><h3 id="discovery-title">A little<br><em>channel surfing.</em></h3><p>My 80s TV turns an analog ritual into a digital place to explore. A reference for nostalgic character with something to discover on the other side.</p><div class="tv-actions"><button class="tv-load" type="button" hidden aria-controls="tv-stage" aria-expanded="false">Watch here on mattseal</button><a class="discovery-link" href="https://80s.theretrotvs.com/" target="_blank" rel="noopener noreferrer">Open full experience <span aria-hidden="true">↗</span><span class="visually-hidden"> (opens in a new tab)</span></a></div><span class="discovery-domain meta">80s.theretrotvs.com / Opens in a new tab</span></div>
+        <div class="tv-experience">
+          <div class="tv-toolbar" hidden><span class="meta">Live / My 80s TV</span><button class="tv-close" type="button">Close TV</button></div>
+          <div id="tv-stage">
+            <figure class="discovery-preview"><a href="https://80s.theretrotvs.com/" aria-label="Launch My 80s TV (opens in a new tab)" target="_blank" rel="noopener noreferrer"><img src="assets/my-80s-tv.webp" width="1440" height="1000" loading="lazy" alt="Actual screenshot of My 80s TV, with a vintage television and channel controls."></a><figcaption class="meta">Actual site preview / My 80s TV</figcaption></figure>
+          </div>
+          <p class="tv-help" id="tv-help" aria-live="polite">Launch the original TV experience in a new tab.</p>
+          <p class="tv-disclosure">The live TV is an external website. Playback may include sound; its controls and motion are provided by My 80s TV.</p>
+        </div>
+      </article>
+      <aside class="supporting-reference" aria-label="Another creative reference"><span class="meta">Also on my radar</span><a href="https://rectangles.fm/" target="_blank" rel="noopener noreferrer">rectangles.fm <span aria-hidden="true">↗</span></a><p>A supporting reference for analog-inspired graphic sensibility and human personality.</p></aside>
     </section>
-    <section class="signoff wrap" aria-labelledby="about-title"><span class="meta">A human behind the pixels</span><div><h2 id="about-title">Always a<br><em>work in progress.</em></h2><p>Matthew Kearney. Product designer, curious human.<br>This is my space to try things and think out loud.</p><a class="professional-link" href="https://sealspace.com/">Professional work at sealspace.com <span aria-hidden="true">↗</span></a></div><span class="signoff-star" aria-hidden="true">✳</span></section>
+    <section class="signoff wrap" aria-labelledby="about-title"><span class="meta">A human behind the pixels</span><div><h2 id="about-title">Always a<br><em>work in progress.</em></h2><p>Matthew Kearney aka Matt Seal. 1 part product designer, 1 part curious human.<br>This is where I try things and think out loud.</p><a class="professional-link" href="https://sealspace.com/" target="_blank" rel="noopener noreferrer">Professional work at sealspace.com <span aria-hidden="true">↗</span></a></div><span class="signoff-star" aria-hidden="true">✳</span></section>
   </main>
-  <footer class="wrap"><a class="wordmark" href="#top">mattseal<span>.</span></a><span class="meta">Made for the things that don't fit neatly.</span><a href="https://www.linkedin.com/in/matthewkearneydesign/">Find me on LinkedIn ↗</a></footer>
+  <footer class="wrap"><a class="wordmark" href="#top">mattseal<span>.</span></a><span class="meta">Made for the things that don't fit neatly.</span><a href="https://www.linkedin.com/in/matthewkearneydesign/" target="_blank" rel="noopener noreferrer">Find me on LinkedIn ↗</a></footer>
 </body>
 </html>

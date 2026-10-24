@@ -15,10 +15,10 @@ Keep the established hero and its mobile composition. Colors and typography rema
 ## Studio Structure
 
 - **Meet Matt:** The existing hero and introduction, with a personal sign-off and professional-work link.
-- **On My Workbench:** Building mattseal.com, moving away from a TV-centered concept, and exploring AI-assisted development.
+- **On My Workbench:** An Evolution Lab exploring the real V1 Retro TV, V2 Editorial, and V3 Open Studio milestones, with genuine screenshots, provisional design commentary, and source links.
 - **Things on My Mind:** Matt's supplied perspective that as AI makes building easier, judgment about what deserves to exist becomes more important.
 - **Behind the Scenes:** Clearly reserved space for genuine process documentation. No invented artifacts, screenshots, or videos.
-- **Current Obsessions:** [rectangles.fm](https://rectangles.fm/) and [My 80s TV](https://80s.theretrotvs.com/) as references for analog-inspired digital creativity. These are external links, not embedded experiences or copied assets.
+- **Current Obsessions:** [rectangles.fm](https://rectangles.fm/) and [My 80s TV](https://80s.theretrotvs.com/) as references for analog-inspired digital creativity. My 80s TV is a featured discovery with an optional live iframe and an attributed screenshot fallback; rectangles.fm remains a smaller supporting link. The TV interface is not rebuilt.
 
 Section names are working labels. Personal commentary is provisional copy for Matt's review, based on his supplied starting points. It is not presented as published content.
 
@@ -45,10 +45,10 @@ Visit http://127.0.0.1:8000. Stop the server with Ctrl+C.
 
 - `index.html` — Semantic studio sections, provisional commentary, and native anchor navigation.
 - `styles.css` — Design tokens, responsive hero, varied studio layouts, focus treatments, and reduced-motion support.
-- `main.js` — Reserved for future content-driven enhancements. Currently contains no executable behavior; the entire homepage works without JavaScript.
-- `assets/` — Original local SVG print artwork, paper grain, and favicon. No remote images or fonts are requested.
+- `main.js` — Accessible Evolution Lab tabs and an opt-in external TV iframe. Without JavaScript, all milestones and the TV screenshot/new-tab launch link remain available.
+- `assets/` — Original local SVG print artwork, paper grain, and favicon. Initial content uses local assets; loading the TV explicitly requests the external site and its media.
 
-The former two-layer print reveal, its controls, styles, behavior, and exclusive second artwork have been removed. No replacement novelty interaction has been added.
+The former two-layer print reveal, its controls, styles, behavior, and exclusive second artwork have been removed. The Evolution Lab now uses genuine saved milestones to explain design decisions; it does not restore the print-reveal interaction.
 
 ## Iteration and Review
 
@@ -87,3 +87,40 @@ LinkedIn: [Matthew Kearney](https://www.linkedin.com/in/matthewkearneydesign)
 ---
 
 *Made for the things that don't fit neatly into a portfolio.*
+
+## Evolution Lab and Screenshot Provenance
+
+The lab starts on V1. Use Left/Right arrows, Home/End, Enter, or Space to select a version. Tab moves from the selected tab into its panel and source link. Direct milestone anchors also select the appropriate panel. All panels are visible without JavaScript. Selection is immediate, with no animation.
+
+Screenshots were captured on 2026-10-23 in Chrome at 1440px wide from isolated, unmodified exports of the saved tags, framing their defining sections. V1 and V2 are 1440 × 1000; V3 is 1440 × 753, fitted to the complete workbench section without a cut-off neighboring section. Captures are compressed WebP with explicit dimensions and lazy loading. Historical tags and the archive branch were not changed.
+
+| Asset | Source |
+|---|---|
+| `assets/v1-retro-tv.webp` | `v1-retro-tv`, commit `36882a9`, TV section |
+| `assets/v2-editorial.webp` | `v2-editorial`, commit `bcf63e0`, print-study section |
+| `assets/v3-open-studio.webp` | `v3-open-studio`, commit `0b29b6e`, workbench section |
+| `assets/my-80s-tv.webp` | Actual capture of https://80s.theretrotvs.com/, initial TV interface; no playback embedded |
+
+The GitHub repository is public (verified before V4). Milestone links open their saved source tags in a new tab. This implementation does not change visibility.
+
+The external screenshot is a preview of My 80s TV, not original mattseal artwork. Its screenshot remains the fallback when the live TV is closed, JavaScript is unavailable, or the viewport is unsuitable for the embedded controls. Its presentation can be replaced independently of the hero and lab. No fabricated screenshots or missing preview placeholders are used.
+
+## Live My 80s TV: Feasibility and Behavior
+
+Checked on 2026-10-23: the final HTTPS response returned 200 with no `X-Frame-Options` or `Content-Security-Policy` header. No meta CSP was present. Actual embedding from a localhost parent rendered successfully in Chrome; `Access-Control-Allow-Origin: *` is not the basis for iframe permission. Recheck the framing policy before a future launch; the external owner can change it.
+
+- The player loads only after **Watch here on mattseal**. Before that, no iframe exists. The iframe has an accessible title, lazy loading, and delegated autoplay/fullscreen/picture-in-picture permissions. Delegation does not guarantee autoplay; browser policy and user activation still apply. The source controls playback and may restore prior state.
+- Desktop (viewport ≥1100px): the live feature expands to full content width, with a 1.44:1 frame matching the verified interface proportions. It is not rotated, cropped, scaled with CSS, or covered by a custom control layer.
+- Phones: testing at 390px found a dedicated 44px-high remote, and emulated power/channel taps worked. However, inside mattseal’s actual 346px content width, the external document measured 398px wide and introduced nested scrolling. The final implementation therefore uses the screenshot plus new-tab launch on phones, rather than shipping that compromise. Physical iOS/Android behavior on the original site remains to be checked.
+- All widths below 1100px, including 768px: retain the authentic screenshot and **Open full experience** link. The external desktop controls measured only about 12px high at 768px, so embedding there is not a comfortable touch experience.
+- **Open full experience** always opens a new tab. **Close TV** removes the iframe (ending its media), restores the preview, and returns keyboard focus. Resizing into the unsupported range also unloads it.
+- The external document includes additional text beneath its TV. Native scrolling inside the frame remains available; no attempt is made to hide its content or manipulate its cross-origin DOM. The initial TV controls fit without internal scrolling in the tested desktop embed. Some offscreen content in the external document still increases its scroll dimensions; mattseal does not conceal or alter it.
+- Cross-origin restrictions prevent mattseal from reading player state, resizing to internal content, styling internal focus, or detecting every blocked/media-error state. No proxy or workaround is used. The launch link remains available if embedding or playback fails.
+- Sound audibility, actual fullscreen/picture-in-picture transitions, Safari/Firefox, physical-device gestures, and third-party cookie/media restrictions still need device testing. Fullscreen permission availability was verified in Chrome, not a successful fullscreen session.
+- Mattseal respects reduced motion. It cannot force the external website or video content to honor that preference; the player is opt-in and can be closed.
+
+## V4 TV Action Hierarchy
+
+On desktop, **Watch here on mattseal** is the primary filled button. **Open full experience** is a secondary text link that opens the original site in a new tab. Once active, the inline activation button is hidden; the live toolbar provides **Close TV**, while the external link remains available. On mobile/tablet, only the prominent full-experience link and authentic screenshot are offered.
+
+Close TV calls `iframe.remove()` and clears the reference, rather than hiding a playing frame. It restores the preview and returns focus to the inline activation button. Resizing into the fallback range also removes the iframe. Removing the browsing context prevents its playback from continuing in the background; a separately opened external tab remains independent.
