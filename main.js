@@ -7,7 +7,71 @@
   const panels = tabs.map(tab => document.getElementById(tab.hash.slice(1)));
   if (panels.some(panel => !panel)) return;
 
+  const supported = matchMedia('(min-width: 1100px)');
+  let activePanel = null;
+  let frame = null;
+
+  function availability() {
+    panels.forEach(panel => {
+      const button = panel.querySelector('.archive-load');
+      button.hidden = !supported.matches || panel === activePanel;
+      button.setAttribute('aria-expanded', String(panel === activePanel));
+    });
+  }
+
+  function unload() {
+    frame?.remove();
+    frame = null;
+    if (activePanel) {
+      activePanel.querySelector('.archive-stage').hidden = true;
+      activePanel.querySelector('figure').hidden = false;
+      activePanel.classList.remove('archive-is-live');
+    }
+    activePanel = null;
+    availability();
+  }
+
+  panels.forEach((panel, index) => {
+    const load = panel.querySelector('.archive-load');
+    const close = panel.querySelector('.archive-close');
+    const stage = panel.querySelector('.archive-stage');
+    load.addEventListener('click', () => {
+      if (!supported.matches) return;
+      unload();
+      activePanel = panel;
+      frame = document.createElement('iframe');
+      frame.title = `V${index + 1} — ${panel.querySelector('h3').textContent}, historical website`;
+      // Opaque origin isolates the archive from the current homepage.
+      frame.setAttribute('sandbox', 'allow-scripts allow-popups allow-popups-to-escape-sandbox');
+      frame.src = panel.querySelector('.archive-full').href;
+      const status = panel.querySelector('.archive-status');
+      status.textContent = 'Loading historical version…';
+      frame.addEventListener('load', () => {
+        status.textContent = 'Live historical website. Scroll inside to explore; Open full version gives you more room.';
+      });
+      stage.hidden = false;
+      panel.querySelector('figure').hidden = true;
+      panel.classList.add('archive-is-live');
+      stage.append(frame);
+      availability();
+      close.focus();
+    });
+    close.addEventListener('click', () => {
+      unload();
+      load.focus({ preventScroll: true });
+    });
+  });
+  supported.addEventListener('change', () => {
+    const previous = activePanel;
+    const restoreFocus = previous && (document.activeElement === frame || previous.querySelector('.archive-close') === document.activeElement);
+    if (!supported.matches) unload();
+    availability();
+    if (restoreFocus && !supported.matches) previous.querySelector('.archive-full').focus();
+  });
+  availability();
+
   function select(index, focus = false) {
+    if (activePanel && activePanel !== panels[index]) unload();
     tabs.forEach((tab, i) => {
       tab.setAttribute('aria-selected', String(i === index));
       tab.tabIndex = i === index ? 0 : -1;

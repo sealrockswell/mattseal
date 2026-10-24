@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="820" viewBox="0 0 700 820">
+<defs><pattern id="grid" width="35" height="35" patternUnits="userSpaceOnUse"><path d="M35 0H0V35" fill="none" stroke="#34382f" stroke-opacity=".14"/></pattern><pattern id="dots" width="7" height="7" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.7" fill="#252b25"/></pattern><clipPath id="circle"><circle cx="350" cy="380" r="258"/></clipPath></defs>
+<path fill="#e9e3d2" d="M0 0h700v820H0z"/><path fill="url(#grid)" d="M0 0h700v820H0z"/>
+<circle cx="350" cy="380" r="258" fill="#d3482b"/>
+<g clip-path="url(#circle)"><path fill="#e9e3d2" d="M-30 250h790v95H-30z" transform="rotate(-32 350 380)"/><path fill="#3049a6" d="M0 462h700v120H0z" transform="rotate(-32 350 380)"/><path fill="url(#dots)" d="M0 540h700v180H0z"/></g>
+<circle cx="350" cy="380" r="140" fill="none" stroke="#e9e3d2" stroke-width="2"/><path d="M350 50v660M20 380h660" stroke="#272922" stroke-width="1"/>
+<path d="M30 30h30m-15-15v30M640 30h30m-15-15v30M30 790h30m-15-15v30M640 790h30m-15-15v30" stroke="#272922"/>
+<text x="40" y="750" font-family="monospace" font-size="12" letter-spacing="3" fill="#272922">FORM / FRICTION / POSSIBILITY</text><text x="40" y="70" font-family="monospace" font-size="11" fill="#272922">MATTSEAL — PRINT STUDY 001</text>
+</svg>

@@ -124,3 +124,23 @@ Checked on 2026-10-23: the final HTTPS response returned 200 with no `X-Frame-Op
 On desktop, **Watch here on mattseal** is the primary filled button. **Open full experience** is a secondary text link that opens the original site in a new tab. Once active, the inline activation button is hidden; the live toolbar provides **Close TV**, while the external link remains available. On mobile/tablet, only the prominent full-experience link and authentic screenshot are offered.
 
 Close TV calls `iframe.remove()` and clears the reference, rather than hiding a playing frame. It restores the preview and returns focus to the inline activation button. Resizing into the fallback range also removes the iframe. Removing the browsing context prevents its playback from continuing in the background; a separately opened external tab remains independent.
+
+
+## Interactive Historical Archive
+
+The current Evolution Lab offers **Try V1/V2/V3 here** on desktop (1100px and wider) and a prominent **Open full version** at every width. The full websites are hosted locally at `/archive/v1/`, `/archive/v2/`, and `/archive/v3/`. GitHub links are secondary public source references.
+
+Use a local HTTP server (`python3 -m http.server 8000`) and open http://localhost:8000/; archive directory URLs need HTTP serving. Each archive owns its HTML, styles, scripts, and assets independently of the current homepage.
+
+- V1 comes from `v1-retro-tv` (`36882a9`), including channel and power controls.
+- V2 comes from `v2-editorial` (`bcf63e0`), including the original print-reveal slider.
+- V3 comes from `v3-open-studio` (`0b29b6e`), including section navigation.
+- `archive/manifest.json` records full commit IDs and original/archived SHA-256 hashes. V2 and V3 runtime files are byte-for-byte copies. V1's only source adjustment replaces its remote Google Fonts import with `assets/fonts.css`. Original font families/weights are bundled as data URLs so they also load in an opaque-origin sandbox, with their OFL licenses alongside them. No design, copy, or interaction was rewritten. Repository-only `.gitignore` and historical README files are omitted.
+
+Previews are opt-in sandboxed iframes with scripts and new-tab links allowed, but no same-origin access or top-level navigation. Close, version switching, and resizing below 1100px remove the previous iframe. Only one archive frame can exist. The independent My 80s TV player is unchanged. Full versions open in their own tabs, without the preview sandbox.
+
+Screenshots remain the initial and closed states. Without JavaScript, all three screenshots, descriptions, decisions, and full-version/source links are visible. On phones/tablets the full-version link avoids a cramped nested viewport. Desktop previews retain native vertical scrolling to keep every historical section reachable; Open full version removes that constraint. A load event confirms document navigation, not every possible network/browser error; the full-version link stays available.
+
+Historical limitations are intentionally preserved, including original copy and control sizes. No new animation was added. Historical reduced-motion rules remain intact. Physical-device and Safari/Firefox testing remain follow-up work.
+
+Validated in local Chrome on 2026-10-24 at 390px, 768px, and 1440px: all standalone versions fit horizontally, images load, and internal anchor targets exist. V1 channel/power controls, V2 keyboard slider, and V3 navigation passed. All three sandboxed previews passed their original interaction checks; switching, closing, and narrowing the viewport remove the iframe. Homepage keyboard selection/focus, reduced motion, no-JavaScript content, and existing My 80s TV activation/removal checks passed. These are browser/emulation checks, not physical-device certification.

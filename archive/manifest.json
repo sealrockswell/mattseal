@@ -1,0 +1,77 @@
+[
+  {
+    "version": "v1",
+    "tag": "v1-retro-tv",
+    "commit": "36882a9fd44e19653892b5b4af354af667dfd452",
+    "omitted": [
+      ".gitignore"
+    ],
+    "original_sha256": {
+      "index.html": "c9a20d1bef47f7acaf01e0ee402c0d7e3a9f7cf6f269bcc43e38229b6ff47931"
+    },
+    "archived_sha256": {
+      "assets/dmmono-OFL.txt": "2bada5ea45c3c63b7f1ea1f88ce9672c9e4f0c42b2c3b7378949084fe55a3066",
+      "assets/dmsans-OFL.txt": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1",
+      "assets/fonts.css": "5329ddc135824eb409171e65fcc93aee82378ca1e43066b6d3c161943809f49e",
+      "assets/spacegrotesk-OFL.txt": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+      "index.html": "32da13f42d749fca56b9120f7fd9576fa96f103b3a12b408d34df2029470f375"
+    },
+    "deviations": [
+      "Google Fonts import replaced with local assets/fonts.css; original font families and weights bundled as data URLs with OFL licenses."
+    ]
+  },
+  {
+    "version": "v2",
+    "tag": "v2-editorial",
+    "commit": "bcf63e09a00447f7db797c98ab7e5b9cb50b58fb",
+    "omitted": [
+      ".gitignore",
+      "README.md"
+    ],
+    "original_sha256": {
+      "assets/favicon.svg": "bb1a06cd2b6e3bf521fa7a4a64bc200409924bc44361aca6e8f27a5a15f0016f",
+      "assets/grain.svg": "b16aa56814c8044d5203c44ff5270cddcc1cef3ddfdde705b2576b8de7cf06d6",
+      "assets/overprint.svg": "b23379035eaa2dbea0c4e3b373553141a9cfb3224fe7ee433538ec1ae3d5d9ff",
+      "assets/underprint.svg": "7e7e00e314f41cbcf54a37c9a1a7cfb8e473b6707ff31089abbbc2f3326b3a44",
+      "index.html": "cfb18726aa7c91743761f9549cf284246c462b38d406dcc91a8b1b2661d01913",
+      "main.js": "835bf827883edefbbc208692ef29809ec76b851bfe53f179cf0bcd432dd27d25",
+      "styles.css": "6dd647a4c8736be812ffe6c216edeb2ccbdba07390070e8ba59a6ec2f98269d0"
+    },
+    "archived_sha256": {
+      "assets/favicon.svg": "bb1a06cd2b6e3bf521fa7a4a64bc200409924bc44361aca6e8f27a5a15f0016f",
+      "assets/grain.svg": "b16aa56814c8044d5203c44ff5270cddcc1cef3ddfdde705b2576b8de7cf06d6",
+      "assets/overprint.svg": "b23379035eaa2dbea0c4e3b373553141a9cfb3224fe7ee433538ec1ae3d5d9ff",
+      "assets/underprint.svg": "7e7e00e314f41cbcf54a37c9a1a7cfb8e473b6707ff31089abbbc2f3326b3a44",
+      "index.html": "cfb18726aa7c91743761f9549cf284246c462b38d406dcc91a8b1b2661d01913",
+      "main.js": "835bf827883edefbbc208692ef29809ec76b851bfe53f179cf0bcd432dd27d25",
+      "styles.css": "6dd647a4c8736be812ffe6c216edeb2ccbdba07390070e8ba59a6ec2f98269d0"
+    },
+    "deviations": []
+  },
+  {
+    "version": "v3",
+    "tag": "v3-open-studio",
+    "commit": "0b29b6e15f05fcc6ce81d2a3f21c23185d60aa96",
+    "omitted": [
+      ".gitignore",
+      "README.md"
+    ],
+    "original_sha256": {
+      "assets/favicon.svg": "bb1a06cd2b6e3bf521fa7a4a64bc200409924bc44361aca6e8f27a5a15f0016f",
+      "assets/grain.svg": "b16aa56814c8044d5203c44ff5270cddcc1cef3ddfdde705b2576b8de7cf06d6",
+      "assets/overprint.svg": "2e63d067b6505cea7c8090484d5964273ef5cb2226236e61c29e3c7b6d611751",
+      "index.html": "aa9b83f2169be5e2aedcbe8a9be5ea01f568663bdad40c96d160b991d071de9e",
+      "main.js": "6f621e87ba1f9cb1ba519f755b3728de81d299905b4f235dc319091ce0463c61",
+      "styles.css": "9dd8792f2813af9361270e4572f681081b3b699afebd5883596bd6a276976da1"
+    },
+    "archived_sha256": {
+      "assets/favicon.svg": "bb1a06cd2b6e3bf521fa7a4a64bc200409924bc44361aca6e8f27a5a15f0016f",
+      "assets/grain.svg": "b16aa56814c8044d5203c44ff5270cddcc1cef3ddfdde705b2576b8de7cf06d6",
+      "assets/overprint.svg": "2e63d067b6505cea7c8090484d5964273ef5cb2226236e61c29e3c7b6d611751",
+      "index.html": "aa9b83f2169be5e2aedcbe8a9be5ea01f568663bdad40c96d160b991d071de9e",
+      "main.js": "6f621e87ba1f9cb1ba519f755b3728de81d299905b4f235dc319091ce0463c61",
+      "styles.css": "9dd8792f2813af9361270e4572f681081b3b699afebd5883596bd6a276976da1"
+    },
+    "deviations": []
+  }
+]
