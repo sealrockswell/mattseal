@@ -556,7 +556,7 @@ footer .meta{
 .version-selector a+a{border-left:1px solid #828477}
 .version-selector a[aria-selected=true]{color:var(--ink);background:var(--yellow)}
 .workbench a:focus-visible,.version-panel:focus-visible{outline:3px solid var(--yellow);outline-offset:5px}
-.version-selector a[aria-selected=true]:focus-visible{outline:3px solid var(--paper);outline-offset:-5px}
+.version-selector a[aria-selected=true]:focus-visible{outline:3px solid var(--ink);outline-offset:-5px}
 .version-panel{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(0,1fr);gap:5%;align-items:start;padding-block:10px 40px}
 .version-panel[hidden]{display:none}
 .version-panel img{width:100%;height:auto;border:7px solid #e1ddcf}
@@ -623,3 +623,26 @@ footer .meta{
 .archive-is-live .version-commentary { grid-column: 1 / -1; max-width: 780px; }
 .archive-stage[hidden], .archive-load[hidden], .version-panel figure[hidden] { display: none; }
 .evolution-lab :is(button, .archive-full):focus-visible { outline: 3px solid #f4d35e; outline-offset: 5px; }
+
+/* V6: clearer controls and compact process note; original compositions retained. */
+.process { grid-template-columns: minmax(0,1fr) minmax(0,1.1fr); padding-block: 24px 42px; border-top: 1px solid var(--line); }
+.process h2.meta { font: 12px/1.5 var(--mono); letter-spacing: .075em; margin: 0; }
+.process > p { font-size: 14px; color: var(--muted); }
+.version-panel figcaption, .discovery-preview figcaption, .discovery-domain, footer .meta { font-size: 11px; }
+.lab-access, .tv-disclosure { font-size: 12px; }
+.archive-load { background: var(--yellow); color: var(--ink); border-color: var(--yellow); }
+.archive-full { background: transparent; color: var(--paper); padding-inline: 0; text-decoration: underline; }
+.signoff > div { grid-column: 2; }
+.signoff-star { grid-column: 3; }
+@media (hover:hover) {
+  .version-selector a:hover:not([aria-selected=true]) { background: #393c32; }
+  .archive-load:hover, .archive-close:hover, .tv-load:hover, .tv-close:hover { text-decoration: underline; text-underline-offset: 4px; }
+  .archive-full:hover, .discovery-link:hover { text-decoration-thickness: 2px; }
+}
+@media (max-width:1099px) {
+  .archive-full { background: var(--paper); color: var(--ink); padding-inline: 18px; text-decoration: none; }
+}
+@media (max-width:700px) {
+  .process { grid-template-columns: minmax(0,1fr); gap: 12px; padding-block: 22px 32px; }
+  .signoff > div { grid-column: 1; }
+}

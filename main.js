@@ -47,7 +47,7 @@
       const status = panel.querySelector('.archive-status');
       status.textContent = 'Loading historical version…';
       frame.addEventListener('load', () => {
-        status.textContent = 'Live historical website. Scroll inside to explore; Open full version gives you more room.';
+        status.textContent = 'Live historical website. Scroll inside to explore; Open the full page for more room.';
       });
       stage.hidden = false;
       panel.querySelector('figure').hidden = true;
