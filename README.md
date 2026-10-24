@@ -2,6 +2,8 @@
 
 **A personal creative studio for design, technology, culture, and things I can't leave alone.**
 
+![mattseal creative studio homepage](assets/mattseal-preview-screenshot.png)
+
 mattseal.com is an experimental personal website by Matthew Kearney, a product designer exploring design, technology, creative coding, and personal expression.
 
 Professional work lives at [sealspace.com](https://sealspace.com/). This studio is a space for curiosity, thinking, work in progress, and creative interests.
